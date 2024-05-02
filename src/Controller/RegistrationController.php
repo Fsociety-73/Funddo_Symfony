@@ -1,9 +1,8 @@
 <?php
 namespace App\Controller;
 
-use App\Entity\User;
+
 use App\Entity\Utilisateur;
-use App\Form\UserType;
 use App\Form\UtilisateurType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -24,7 +23,7 @@ class RegistrationController extends AbstractController
     public function index(Request $request)
     {
         $user = new Utilisateur();
-
+        $user->setRole("User");
         $form = $this->createForm(UtilisateurType::class, $user);
 
         $form->handleRequest($request);
@@ -38,8 +37,8 @@ class RegistrationController extends AbstractController
             );
             $user->setPassword($hashedPassword);
             // Set their role
-            $selectedRole = $form->get('role')->getData();
-            $user->setRole($selectedRole);
+            
+
             // Save
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);

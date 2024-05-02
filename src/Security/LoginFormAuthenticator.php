@@ -44,36 +44,17 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $firewallName): ?Response
     {
-        //if ($targetPath = $this->getTargetPath($request->getSession(), $firewallName)) {
-        //   return new RedirectResponse($targetPath);
-        // }
+        if ($targetPath = $this->getTargetPath($request->getSession(), $firewallName)) {
+            return new RedirectResponse($targetPath);
+        }
 
         // For example:
         // return new RedirectResponse($this->urlGenerator->generate('some_route'));
-        // return new RedirectResponse('/');
-        // Get the user object from the token
-        $user = $token->getUser();
-
-        // Get the role of the user
-        $role = $user->getRole();
-
-        // Determine the target URL based on the role
-        // $targetUrl = '/'; // Default URL
-
-        // Redirect users based on their role
-        switch ($role) {
-            case 'admin':
-                $targetUrl = $this->urlGenerator->generate('admin_dashboard');
-                break;
-            case 'client':
-                $targetUrl = $this->urlGenerator->generate('client_dashboard');
-                break;
-        }
-        return new RedirectResponse($targetUrl);
+        return new RedirectResponse('/');
+        throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 
-    protected
-    function getLoginUrl(Request $request): string
+    protected function getLoginUrl(Request $request): string
     {
         return $this->urlGenerator->generate(self::LOGIN_ROUTE);
     }

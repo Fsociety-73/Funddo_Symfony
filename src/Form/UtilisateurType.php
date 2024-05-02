@@ -24,20 +24,10 @@ class UtilisateurType extends AbstractType
             ])
             ->add('telephone')
             ->add('adresse')
-            ->add('role', ChoiceType::class, [
-                'choices' => [
-                    'Client' => 'Client',
-                    'Donateur' => 'Donateur',
-                    'Investisseur' => 'Investisseur',
-                    'Vendeur' => 'Vendeur',
-                    'Porteur' => 'Porteur',
-                    'project_creator' => 'project_creator',
-                    // Add more roles here as needed
-                ],
-                'placeholder' => 'Choose a role',
-            ]);
-
-
+            
+        
+            
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

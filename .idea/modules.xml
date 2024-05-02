@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/testing.auth.symfony-main.iml" filepath="$PROJECT_DIR$/.idea/testing.auth.symfony-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Funddosymfony_user.iml" filepath="$PROJECT_DIR$/.idea/Funddosymfony_user.iml" />
     </modules>
   </component>
 </project>
