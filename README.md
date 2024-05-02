@@ -1,2 +1,2 @@
-# Symfony_project
-user manegement  
+# testing.auth.symfony
+ part of a uni project
