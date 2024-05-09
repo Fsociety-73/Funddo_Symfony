@@ -1,2 +1,2 @@
-# Funddo Symfony Project
-Users Mangement Part of Project 
+# testing.auth.symfony
+ part of a uni project

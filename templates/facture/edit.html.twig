@@ -1,0 +1,37 @@
+
+{% include "back/base.html.twig" %}
+
+{% block inside %}
+{% block title %} Modifier Facture {% endblock %}
+
+
+{% block body %}
+
+    <div class="custom-form-container">
+        <h1>Modifier Facture</h1>
+
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+        {{ form_widget(form) }}
+        <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+        {{ form_end(form) }}
+
+        <a href="{{ path('list_Facture') }}" class="btn btn-secondary">Retour à la liste des factures</a>
+
+        <div class="loading">Chargement...</div>
+        <div class="error-message"></div>
+        <div class="success-message">Les modifications ont été enregistrées avec succès.</div>
+    </div>
+
+{% endblock %}
+
+
+
+   {% endblock %}
+
+
+{% include "back/base2.html.twig" %}
+
+
+
+
+

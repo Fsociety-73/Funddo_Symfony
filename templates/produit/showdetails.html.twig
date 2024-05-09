@@ -1,0 +1,85 @@
+{% include "back/base.html.twig" %}
+
+{% block inside %}
+{% block title %}
+
+    Liste des Produits
+
+{% endblock %}
+
+
+
+
+{% block body %}
+
+
+    <div class="service">
+
+        <div class="custom-form-container">
+
+            <div class="section-header text-center">
+
+                <div id="google_translate_element"></div>
+
+                <h4 style="margin-top:50px; margin-bottom:50px;">Liste des Produits</h4>
+
+            </div>
+
+            <div class="row">
+
+                
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+
+                        <div class="service-item">
+
+                            <img src="{{ asset('uploads/' ~ produit.photo) }}" style=" width:360px; height:250px; " alt="">
+
+                            <p><strong style="color:#696969">Nombre des produits:</strong> {{ produit.getNbProduit()}}</p>
+
+                            <p><strong style="color:#696969">Description:</strong> {{ produit.description }}</p>
+
+                            <p><strong style="color:#696969">Prix:</strong> {{ produit.prix }}</p>
+
+                            <p><strong style="color:#696969">Catégorie:</strong> {{ produit.categorie }}</p>
+
+                            
+                            <p><strong style="color:#696969">Name:</strong> {{ produit.name }}</p>
+                            
+                        </div>
+
+                    </div>
+
+            
+
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    <br>
+
+    
+
+
+
+
+{% endblock %}
+
+
+
+
+{% endblock %}
+
+
+
+{% include "back/base2.html.twig" %}
+
+
+
+
+
+
+
